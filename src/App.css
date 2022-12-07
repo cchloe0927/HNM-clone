@@ -1,0 +1,84 @@
+.login-button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.user-logo{
+  margin-right: 10px;
+}
+
+.nav-section {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-area{
+  display: flex;
+  justify-content: center;
+}
+
+.menu-list {
+  display: flex;
+  /* li 점 지우기 */
+  list-style-type: none;
+}
+
+.menu-list li {
+  padding: 10px;
+}
+
+.search-box {
+  position: relative;
+  right: -40px;
+  width: 130px;
+  height: 30px;
+  border-bottom: 1.5px solid #888;
+
+}
+
+.search-input {
+  width: 100px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.img-card {
+  width: 250px;
+  height: 350px;
+}
+.img-card:hover {
+  transform: scale(1.12);
+}
+
+.login-box {
+  margin-top: 30px;
+}
+
+.product-img {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product-price {
+  margin-top: 15px;
+}
+
+.dropdown-box {
+  margin-top: 15px;
+  width: 115px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.product-btn {
+  margin-top: 20px;
+  width: 396px;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
