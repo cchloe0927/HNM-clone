@@ -3,7 +3,7 @@ function getProducts(searchQuery) {
     let url = `https://my-json-server.typicode.com/cchloe0927/HNM-clone/products?q=${searchQuery}`;
     let response = await fetch(url);
     let data = await response.json();
-    console.log(data);
+    dispatch({ type: "GET_PRODUCT_SUCCESS", payload: { data } });
   };
 }
 

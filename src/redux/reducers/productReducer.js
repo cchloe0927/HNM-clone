@@ -3,13 +3,18 @@
 //Action Creator
 
 //Initial
-let initialState = {};
+let initialState = {
+  productList: [],
+};
 
 //reducer
 function productReducer(state = initialState, action) {
-  switch (action.type) {
+  let { type, payload } = action;
+  switch (type) {
+    case "GET_PRODUCT_SUCCESS":
+      return { ...state, productList: payload.data };
     default:
-      return state;
+      return { ...state };
   }
 }
 
