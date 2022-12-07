@@ -10,7 +10,7 @@ const ProductAll = () => {
   //disport 초기 설정
   const dispatch = useDispatch();
   //useSelect 상태 값 읽어오기
-  const productList = useSelector((state) => state.productList);
+  const productList = useSelector((state) => state.product.productList);
   const [query, setQuery] = useSearchParams();
   const getProducts = () => {
     let searchQuery = query.get("q") || "";
