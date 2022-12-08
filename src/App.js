@@ -1,13 +1,13 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import { Routes, Route } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-import Navbar from './component/Navbar';
-import ProductAll from './page/ProductAll';
-import Login from './page/Login';
-import PrivateRoute from './route/PrivateRoute';
+import Navbar from "./component/Navbar";
+import ProductAll from "./page/ProductAll";
+import Login from "./page/Login";
+import PrivateRoute from "./route/PrivateRoute";
 
 //1. 전체 상품 페이지, 로그인, 상품 상세페이지 1-1.navbar만들기
 //2. 전체 상품 페이지에서는 전체 상품을 볼 수 있다.
@@ -19,22 +19,19 @@ import PrivateRoute from './route/PrivateRoute';
 function App() {
   const [authenticate, setAuthenticate] = useState(false); //ture면 로그인 됨
   useEffect(() => {
-    console.log('aaa', authenticate);
+    console.log("aaa", authenticate);
   }, [authenticate]);
 
   return (
     <div>
       <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} />
       <Routes>
-        <Route path='/' element={<ProductAll />} />
+        <Route path="/" element={<ProductAll />} />
         <Route
-          path='/login'
+          path="/login"
           element={<Login setAuthenticate={setAuthenticate} />}
         />
-        <Route
-          path='/product/:id'
-          element={<PrivateRoute authenticate={authenticate} />}
-        />
+        <Route path="/product/:id" element={<PrivateRoute />} />
       </Routes>
     </div>
   );
